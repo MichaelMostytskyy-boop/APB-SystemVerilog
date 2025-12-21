@@ -6,7 +6,7 @@ module apb_master (
     // System -> Master inputs
     input  logic        PCLK,     // System clock. All APB operations are synchronized to posedge PCLK
     input  logic        PRESETn,   // Active-low reset. Forces the master FSM to IDLE and clears control signals
-    input  logic [1:0]  mux,      // Operation select:  00 = No operation (IDLE)  01 = Read transaction  11 = Write transaction
+    input  logic  [1:0]  mux,      // Operation select:  00 = No operation (IDLE)  01 = Read transaction  11 = Write transaction
     input  logic  [31:0] wdata_in,
     input  logic  [31:0] addr_in,
     // Master -> Slave outputs

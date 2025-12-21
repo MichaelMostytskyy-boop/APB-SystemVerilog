@@ -1,7 +1,6 @@
 //=============================================================
 // Michael Mostytskyy
-// SystemVerilog Testbench for APB Master-Slave System
-// Verification using Directed and Randomized Tests
+// Testbench for APB Master-Slave System
 //=============================================================
 `timescale 1ns / 1ps
 
