@@ -1,7 +1,10 @@
-//=============================================================
-// Michael Mostytskyy
-// FSM-Based Implementation of an  APB Slave Interface
-//=============================================================
+/* Michael Mostytskyy
+ Project: FSM-Based AMBA APB Master & Slave Interface
+ Description: 
+    APB Slave peripheral with 4 internal 32-bit registers.
+    Implements zero-wait state read/write access logic.
+*/
+
 module apb_slave_simple (
     input  logic        PCLK,
     input  logic        PRESETn,
@@ -29,12 +32,10 @@ module apb_slave_simple (
 
   
     // APB response signals
-    
     assign PREADY  = 1'b1;   // No wait states
   
 
     // Write operation (ACCESS phase)
-   
     always @(posedge PCLK or negedge PRESETn) begin
         if (!PRESETn) begin
             regfile[0] <= 32'b0;
@@ -47,8 +48,7 @@ module apb_slave_simple (
         end
     end
     // Read operation (combinational)
- 
-    always @(*) begin
+     always @(*) begin
         if (PSEL && !PWRITE)
             PRDATA = regfile[addr_idx];
         else

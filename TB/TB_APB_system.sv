@@ -1,7 +1,10 @@
-//=============================================================
-// Michael Mostytskyy
-// Testbench for APB Master-Slave System
-//=============================================================
+/* Michael Mostytskyy
+ Project: FSM-Based AMBA APB Master & Slave Interface
+ Description: 
+    Testbench to verify the APB Master and Slave interaction.
+    Performs a Write transaction followed by a Read transaction.
+*/
+
 `timescale 1ns / 1ps
 
 module tb_apb_system;
