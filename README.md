@@ -81,12 +81,12 @@ The simulation validates the FSM correctness through two key transactions:
 * `apb_slave_simple.sv`: A reference Slave module with 4 internal registers.
 
 ## 7. Tools Used
-* **Language:** SystemVerilog
-* **Simulation:** Icarus Verilog / ModelSim / Vivado Simulator
-* **Waveform Analysis:** GTKWave / Vivado Logic Analyzer
+* **Language:** SystemVerilog (IEEE 1800-2012)
+* **Simulation:** Icarus Verilog (iverilog)
+* **Waveform Analysis:** GTKWave
 
 ## 8. How to Run Simulation
-To compile and simulate the design (assuming a testbench `tb_apb.sv` exists):
+To compile and simulate the design using Icarus Verilog:
 
 ```bash
 # 1. Compile the design
