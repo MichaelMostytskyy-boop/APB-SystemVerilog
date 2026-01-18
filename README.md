@@ -16,45 +16,8 @@ The core logic is driven by a **Finite State Machine (FSM)** that strictly adher
 ## 3. Architecture Overview
 The system is divided into two main modules connected via the standard APB interface signals.
 
-```mermaid
-%%{init: {'themeVariables': { 'fontFamily': 'Arial', 'fontSize': '14px'}}}%%
-graph LR
-    %% Global Signals on the far left
-    CLK((PCLK / PRESETn))
+![APB System Architecture Diagram](images/architecture_diagram.png)
 
-    subgraph TB [Testbench / System Host]
-        GEN[Stimulus Generator]
-    end
-
-    subgraph DUT [APB System]
-        %% The DUT components sit next to each other
-        M[APB Master]
-        S[APB Slave]
-    end
-
-    %% Clock connections (dotted lines)
-    CLK -.- GEN
-    CLK ==> M
-    CLK ==> S
-
-    %% Host to Master flow (left to right)
-    GEN -->|"mux (1:0)"| M
-    GEN ==>|addr_in| M
-    GEN ==>|wdata_in| M
-
-    %% Master to Slave flow (left to right)
-    M ==>|PADDR| S
-    M ==>|PWDATA| S
-    M -->|PSEL| S
-    M -->|PENABLE| S
-    M -->|PWRITE| S
-
-    %% Feedback from Slave to Master (right to left)
-    S ==>|PRDATA| M
-    S -->|PREADY| M
-    S -->|PSLVERR| M
-    
-```
 ### 3.1 APB Master (Controller)
 The Master acts as the bridge between the high-level system logic and the APB bus. It translates simple commands into the precise APB protocol timing:
 1.  **IDLE State:** Waits for a transaction request (`mux` input).
