@@ -17,8 +17,8 @@ The core logic is driven by a **Finite State Machine (FSM)** that strictly adher
 The system is divided into two main modules connected via the standard APB interface signals.
 
 ```mermaid
-graph TD
-    %% Global Signals
+graph LR
+    %% Global Signals on the far left
     CLK((PCLK / PRESETn))
 
     subgraph TB [Testbench / System Host]
@@ -26,35 +26,26 @@ graph TD
     end
 
     subgraph DUT [APB System]
-        direction LR
         M[APB Master]
         S[APB Slave]
     end
 
-    %% Clock Connections
+    %% Clock Connections going right
     CLK -.- GEN
     CLK ==> M
     CLK ==> S
 
-    %% Host to Master Interface
+    %% Host to Master Interface going right
     GEN -->|mux 1:0| M
     GEN ==>|addr_in, wdata_in| M
 
-    %% APB Forward Channel (Master to Slave)
+    %% APB Forward Channel going right
     M ==>|PADDR, PWDATA| S
     M -->|PSEL, PENABLE, PWRITE| S
 
-    %% APB Feedback Channel (Slave to Master)
+    %% APB Feedback Channel returning left
     S ==>|PRDATA| M
     S -->|PREADY, PSLVERR| M
-
-    %% Styling
-    style M fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    style S fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style TB fill:#fff3e0,stroke:#ef6c00,stroke-dasharray: 5 5
-    
-    %% Link Styling
-    linkStyle 3,5,7 stroke-width:4px,fill:none,stroke:black;
     
 ```
 ### 3.1 APB Master (Controller)
