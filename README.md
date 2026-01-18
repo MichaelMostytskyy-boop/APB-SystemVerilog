@@ -16,6 +16,7 @@ The core logic is driven by a **Finite State Machine (FSM)** that strictly adher
 ## 3. Architecture Overview
 The system is divided into two main modules connected via the standard APB interface signals.
 
+### Block Diagram
 ![APB System Architecture Diagram](images/architecture_diagram.png)
 
 ### 3.1 APB Master (Controller)
