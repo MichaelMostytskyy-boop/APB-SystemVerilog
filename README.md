@@ -37,7 +37,7 @@ graph TD
     CLK ==> S
 
     %% Host to Master Interface
-    GEN -->|mux [1:0]| M
+    GEN -->|mux 1:0| M
     GEN ==>|addr_in, wdata_in| M
 
     %% APB Forward Channel (Master to Slave)
