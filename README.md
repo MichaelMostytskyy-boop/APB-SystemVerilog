@@ -39,15 +39,20 @@ graph LR
 
     %% Host to Master flow (left to right)
     GEN -->|"mux (1:0)"| M
-    GEN ==>|addr_in, wdata_in| M
+    GEN ==>|addr_in| M
+    GEN ==>|wdata_in| M
 
     %% Master to Slave flow (left to right)
-    M ==>|PADDR, PWDATA| S
-    M -->|PSEL, PENABLE, PWRITE| S
+    M ==>|PADDR| S
+    M ==>|PWDATA| S
+    M -->|PSEL| S
+    M -->|PENABLE| S
+    M -->|PWRITE| S
 
     %% Feedback from Slave to Master (right to left)
     S ==>|PRDATA| M
-    S -->|PREADY, PSLVERR| M
+    S -->|PREADY| M
+    S -->|PSLVERR| M
     
 ```
 ### 3.1 APB Master (Controller)
