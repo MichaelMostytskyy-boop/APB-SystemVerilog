@@ -1,36 +1,39 @@
 /* Michael Mostytskyy
  Project: FSM-Based AMBA APB Master & Slave Interface
  Description: 
-    Hardware implementation of an APB Master controller using a 3-state FSM.
-    It handles Read/Write transactions with correct protocol timing (SETUP/ACCESS)
+   Hardware implementation of an APB Master controller using a 3-state FSM.
+   It handles Read/Write transactions with correct protocol timing (SETUP/ACCESS)
 */
 
-module apb_master (
+module apb_master #(
+    parameter ADDR_WIDTH = 32, // Configurable Address width
+    parameter DATA_WIDTH = 32  // Configurable Data width
+)(
  // System -> Master inputs
-    input  logic        PCLK,      // System Clock
-    input  logic        PRESETn,   // Active-Low Reset
-    input  logic [1:0]  mux,       // Op: 00 = Idle, 01 = Read, 11 = Write
-    input  logic [31:0] wdata_in,  // Write Data Input
-    input  logic [31:0] addr_in,   // Address Input
+    input  logic                    PCLK,      // System Clock
+    input  logic                    PRESETn,   // Active-Low Reset
+    input  logic [1:0]              mux,       // Op: 00 = Idle, 01 = Read, 11 = Write
+    input  logic [DATA_WIDTH-1:0]   wdata_in,  // Write Data Input
+    input  logic [ADDR_WIDTH-1:0]   addr_in,   // Address Input
 
     // Master -> Slave outputs
-    output logic [31:0] PADDR,     // APB Address
-    output logic        PSEL,      // Slave Select
-    output logic        PENABLE,   // Enable Signal
-    output logic        PWRITE,    // 1 = Write, 0 = Read
-    output logic [31:0] PWDATA,    // APB Write Data
+    output logic [ADDR_WIDTH-1:0]   PADDR,     // APB Address
+    output logic                    PSEL,      // Slave Select
+    output logic                    PENABLE,   // Enable Signal
+    output logic                    PWRITE,    // 1 = Write, 0 = Read
+    output logic [DATA_WIDTH-1:0]   PWDATA,    // APB Write Data
 
     // Slave -> Master inputs
-    input  logic [31:0] PRDATA,    // APB Read Data
-    input  logic        PREADY     // Slave Ready Signal
-  
+    input  logic [DATA_WIDTH-1:0]   PRDATA,    // APB Read Data
+    input  logic                    PREADY,    // Slave Ready Signal
+    input  logic                    PSLVERR    // Slave Error Signal
 );
 
 // Internal Registers
-    logic [31:0] addr_reg;   // Latched Address
-    logic [31:0] wdata_reg;  // Latched Write Data
-    logic [31:0] rdata_reg;  // Latched Read Data
-    logic        write_reg;  // Latched Direction
+    logic [ADDR_WIDTH-1:0] addr_reg;   // Latched Address
+    logic [DATA_WIDTH-1:0] wdata_reg;  // Latched Write Data
+    logic [DATA_WIDTH-1:0] rdata_reg;  // Latched Read Data
+    logic                  write_reg;  // Latched Direction
 
     // FSM States
     typedef enum logic [1:0] {
@@ -41,7 +44,6 @@ module apb_master (
 
     // FSM Variables
     apb_state current_state, next_state;
-
 
 
 // FSM State Register
@@ -105,9 +107,9 @@ end
 always @(posedge PCLK or negedge PRESETn) begin
     if (!PRESETn) begin
         write_reg <= 1'b0;
-        wdata_reg <= 32'b0;
-        rdata_reg <= 32'b0;
-        addr_reg  <= 32'b0;
+        wdata_reg <= {DATA_WIDTH{1'b0}};
+        rdata_reg <= {DATA_WIDTH{1'b0}};
+        addr_reg  <= {ADDR_WIDTH{1'b0}};
     end
     else begin
         // Latch Transaction Inputs
@@ -123,4 +125,23 @@ always @(posedge PCLK or negedge PRESETn) begin
         end
     end
 end
+/*
+// Verification: SVA Properties
+    property p_setup_phase;
+        @(posedge PCLK) (current_state == SETUP) |=> (PSEL && !PENABLE);
+    endproperty
+
+    property p_access_phase;
+        @(posedge PCLK) (current_state == ACCESS) |-> (PSEL && PENABLE);
+    endproperty
+
+    property p_stable_addr;
+        @(posedge PCLK) (PSEL && !PENABLE) |=> (PADDR == $past(PADDR));
+    endproperty
+
+    a_setup_phase: assert property (p_setup_phase);
+    a_access_phase: assert property (p_access_phase);
+    a_stable_addr: assert property (p_stable_addr);
+    */
+
 endmodule
