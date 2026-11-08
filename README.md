@@ -88,12 +88,20 @@ Coverage is measured on the bins above, with the default seed.
 
 The testbench `STATUS` line counts only its own checks; with SVA enabled, look for `[SVA]` messages in the log.
 
-### Simulation Waveform
-The waveform below (about 380-650 ns of the simulation, viewed in GTKWave) shows the decode-error behavior with `NUM_REGS_TEST = 8`, i.e. valid addresses `0x00`-`0x1C`:
+### Simulation Waveforms
+Both waveforms are taken from the same simulation and viewed in GTKWave.
 
-![Simulation Waveform](images/sim_wave.png)
+**1. Write followed by read-back (in-range address)**
 
-**Analysis of Results:**
+![Write and Read Waveform](images/sim_wave_write_read.png)
+
+1.  **Write Transaction (left):** after reset is released at 50 ns, the Master asserts `PSEL` with `PWRITE` **HIGH** and drives `0xDEADBEEF` on `PWDATA` (address `0x00`). `PENABLE` rises one cycle later (ACCESS). While `PREADY` is low (wait-states) the controls stay stable, and the transfer completes when `PREADY` goes high.
+2.  **Read Transaction (right):** the Master asserts `PSEL` with `PWRITE` **LOW**. This transfer has no wait-states, and during the ACCESS cycle `PRDATA` returns `0xDEADBEEF`, the value that was written.
+
+**2. Out-of-range accesses (error response)**
+The waveform below (about 380-650 ns of the simulation) shows the decode-error behavior with `NUM_REGS_TEST = 8`, i.e. valid addresses `0x00`-`0x1C`:
+
+![Error Response Waveform](images/sim_wave_error.png)
 
 1.  **Out-of-range read (`0x20`, directed test):** `PSLVERR` is raised, `PRDATA` stays `0`, and `master_err` goes high at the end of the transfer.
 2.  **Out-of-range write and read (`0x24`, random stage):** the same behavior, with a different number of wait-states in each transfer. While `PREADY` is low, `PSEL`, `PENABLE`, `PADDR`, `PWRITE` and `PWDATA` stay stable.
