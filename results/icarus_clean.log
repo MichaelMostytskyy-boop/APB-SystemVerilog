@@ -1,0 +1,18 @@
+﻿
+[INIT] Applying System Reset...
+VCD info: dumpfile apb_final.vcd opened for output.
+[INIT] System Running with 8 Registers.
+
+--- Starting Directed Tests ---
+
+--- Starting Error (PSLVERR) Tests ---
+
+--- Starting Random Stress Test (200 Iterations) ---
+..........
+
+==========================================
+   STATUS: PASSED 
+   Ran 398 tests with 0 errors.
+   Scoreboard checks: 407
+==========================================
+TB/TB_APB_system.sv:316: $finish called at 24275000 (1ps)

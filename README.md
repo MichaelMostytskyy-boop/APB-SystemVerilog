@@ -26,9 +26,10 @@ The Master acts as the bridge between the high-level system logic and the APB bu
 3.  **ACCESS Phase:** Asserts `PENABLE` to validate the transfer. It waits for the Slave's `PREADY` signal before completing the transaction and latching data (for reads) or finishing the write.
 
 ### 3.2 APB Slave (Peripheral)
-The Slave implements a simple 4-register file with dynamic timing:
-* **Write Operations:** Data is written to the internal register array on the rising edge of `PCLK` when `PSEL`, `PENABLE`, and `PWRITE` are active.
+The Slave implements a simple register file (`NUM_REGS` words, default 4) with dynamic timing:
+* **Write Operations:** Data is written to the internal register array on the rising edge of `PCLK` when `PSEL`, `PENABLE`, `PWRITE`, and `PREADY` are active and the address is in range.
 * **Wait-State Generation:** The Slave uses a random generator to deassert `PREADY`, simulating realistic peripheral delays.
+* **Error Response:** `PSLVERR` is raised for an out-of-range address (decode error). The Master latches it at the handshake.
 
 ## 4. Interface Description
 The module interacts with the host system on one side and the APB bus on the other. All operations are synchronized to the rising edge of the clock.
@@ -37,9 +38,10 @@ The module interacts with the host system on one side and the APB bus on the oth
 | :--- | :--- | :--- | :--- | :--- |
 | **Global** | `PCLK` | Input | 1-bit | **System Clock**. All logic triggers on the rising edge. |
 | | `PRESETn` | Input | 1-bit | **Active-Low Reset**. Asynchronous reset to initialize FSM and registers. |
-| **System Interface** | `mux` | Input | 2-bit | **Operation Select**. Controls the transaction type:<br>`00`: IDLE (No op)<br>`01`: READ transaction<br>`11`: WRITE transaction |
+| **System Interface** | `mux` | Input | 2-bit | **Operation Select**. Controls the transaction type:<br>`00`: IDLE (No op)<br>`01`: READ transaction<br>`11`: WRITE transaction<br>`10`: Ignored (stays IDLE) |
 | | `addr_in` | Input | `ADDR_WIDTH` | **Address Input**. Target address provided by the system. |
 | | `wdata_in` | Input | `DATA_WIDTH` | **Write Data Input**. Payload to be written to the slave (valid when `mux=11`). |
+| | `master_err_out` | Output | 1-bit | **Transfer Error**. `PSLVERR` of the last completed transfer; cleared when a new transfer starts. |
 | **APB Bus** | `PADDR` | Output | `ADDR_WIDTH` | **APB Address**. Driven to the peripheral during SETUP/ACCESS. |
 | | `PSEL` | Output | 1-bit | **Slave Select**. Asserted to indicate a transaction start. |
 | | `PENABLE` | Output | 1-bit | **Enable**. Asserted during the ACCESS phase to validate the transfer. |
@@ -47,10 +49,10 @@ The module interacts with the host system on one side and the APB bus on the oth
 | | `PWDATA` | Output | `DATA_WIDTH` | **APB Write Data**. Driven by Master during write cycles. |
 | | `PRDATA` | Input | `DATA_WIDTH` | **APB Read Data**. Incoming data from the Slave. |
 | | `PREADY` | Input | 1-bit | **Ready Handshake**. Slave signal to extend the transfer (Wait states). |
-| | `PSLVERR` | Input | 1-bit | **Slave Error**. Indicates a failed transfer (Supported in interface). |
+| | `PSLVERR` | Input | 1-bit | **Slave Error**. Out-of-range address; latched by the Master at the handshake and reported on `master_err_out`. |
 
 ## 5. Verification
-The system is verified using a sophisticated testbench that includes a **Scoreboard** for data integrity and **Functional Coverage** for test completeness.
+The system is verified using a self-checking testbench that includes a bus-level **Scoreboard** for data integrity, **SVA** assertions for protocol compliance, and **Functional Coverage** for test completeness (SVA and coverage run with `+define+APB_ASSERT` on a simulator that supports them).
 
 ### Functional Flow Verified:
 1.  **Write Transaction:**
@@ -63,6 +65,29 @@ The system is verified using a sophisticated testbench that includes a **Scorebo
     * Slave drives data from the requested register onto `PRDATA`.
     * Master latches `PRDATA` into internal `rdata_reg` when `PREADY` is high.
 
+### Error Tests, Results and Fault Injection
+* **Directed and error tests:** write/read of two registers, a write to the last valid register, and an out-of-range write and read (the Master must report an error).
+* **Randomized test:** 200 write/read iterations, about 10% of them out of range.
+* **SVA:** six protocol assertions in the Master (`PENABLE` needs `PSEL`, SETUP lasts one cycle, `PENABLE` rises right after SETUP, stable controls during wait-states, `PSEL` drops after the handshake, error latched at the handshake) and one decode-error assertion in the testbench.
+* **Functional coverage:** direction, in/out of range, number of wait-states (0, 1, 2-3, 4+), error flag and register index, with crosses of direction x range and direction x wait-states.
+
+| Run | Tool | Result |
+| :--- | :--- | :--- |
+| Clean, no SVA | Icarus Verilog | PASSED, 407 scoreboard checks |
+| Clean, `+define+APB_ASSERT` | Cadence Xcelium (EDA Playground) | PASSED, 407 scoreboard checks, no SVA failures, functional coverage 100% |
+
+Coverage is measured on the bins above, with the default seed.
+
+**Fault injection** (compile-time switches that insert a known bug, to check that the verification catches it):
+
+| Switch | Bug | Caught by |
+| :--- | :--- | :--- |
+| `INJECT_BUG` (Slave) | Write data has bit 0 flipped | Scoreboard and data checks (Icarus: 382 errors) |
+| `INJECT_SVA_BUG2` (Master) | `PWDATA` changes while waiting for `PREADY` | `a_wait_state_stable` only; the scoreboard does not see it because the correct data is present at the handshake |
+| `INJECT_SVA_BUG1` (Master) | `PENABLE` raised already in SETUP | `a_enable_after_setup` (first failure at 75 ns), `a_idle_after_done`, `a_err_latched` and `a_decode_err`; the testbench also reports data errors |
+
+The testbench `STATUS` line counts only its own checks; with SVA enabled, look for `[SVA]` messages in the log.
+
 ### Simulation Waveform Snapshot
 The waveform below captures the simulation results. It demonstrates a successful **Write** transaction followed by a **Read** verification to ensure data integrity.
 
@@ -74,21 +99,22 @@ The simulation validates the FSM correctness through two key transactions:
 1.  **Write Transaction (Left Side):**
     * The Master asserts `PSEL` and drives `PWRITE` **HIGH**, indicating a write operation.
     * The payload `0xDEADBEEF` is driven onto the `PWDATA` bus.
-    * When `PENABLE` goes high, the Slave captures the data.
+    * When `PENABLE` and `PREADY` are high, the Slave captures the data.
 
 2.  **Read Transaction (Right Side):**
     * The Master asserts `PSEL` again but drives `PWRITE` **LOW**, indicating a read operation.
     * The Slave responds by driving the previously stored value, `0xDEADBEEF`, onto the `PRDATA` bus.
-    * The simulation proves that the data was correctly stored in the Slave and retrieved by the Master without data loss or timing violations.
+    * The simulation proves that the data was correctly stored in the Slave and retrieved by the Master without data loss.
 
 ## 6. File Description
-* `apb_master.sv`: The FSM-based Master controller RTL with SVA properties.
-* `apb_slave_simple.sv`: A reference Slave module with randomized wait-states.
-* `tb_apb_system.sv`: Top-level testbench with Scoreboard and Coverage.
+* `RTL/APB_master.sv`: The FSM-based Master controller RTL (module `apb_master`) with SVA properties.
+* `RTL/APB_slave.sv`: A reference Slave module (module `apb_slave_simple`) with randomized wait-states.
+* `TB/TB_APB_system.sv`: Top-level testbench with Scoreboard and Coverage.
+* `results/`: Simulation logs of the runs listed in Section 5.
 
 ## 7. Tools Used
 * **Language:** SystemVerilog (IEEE 1800-2012)
-* **Simulation:** Icarus Verilog (iverilog)
+* **Simulation:** Icarus Verilog (iverilog) for the basic run; Cadence Xcelium (EDA Playground) for SVA and functional coverage
 * **Waveform Analysis:** GTKWave
 
 ## 8. How to Run Simulation
@@ -102,4 +128,14 @@ iverilog -g2012 -o apb_sim RTL/APB_master.sv RTL/APB_slave.sv TB/TB_APB_system.s
 vvp apb_sim
 
 # 3. View Waveforms
-gtkwave apb_improved.vcd
+gtkwave apb_final.vcd
+```
+
+To run the SVA and the functional coverage (commercial simulator, e.g. Xcelium):
+
+```bash
+xrun -sv -access +rw +define+APB_ASSERT -coverage functional \
+     RTL/APB_master.sv RTL/APB_slave.sv TB/TB_APB_system.sv
+```
+
+Fault injection: add `-DINJECT_BUG` (Icarus), or `+define+INJECT_SVA_BUG1` / `+define+INJECT_SVA_BUG2` next to `+define+APB_ASSERT` (Xcelium).
