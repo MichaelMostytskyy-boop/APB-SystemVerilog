@@ -88,31 +88,15 @@ Coverage is measured on the bins above, with the default seed.
 
 The testbench `STATUS` line counts only its own checks; with SVA enabled, look for `[SVA]` messages in the log.
 
-### Simulation Waveform Snapshot
-The waveform below captures the simulation results. It demonstrates a successful **Write** transaction followed by a **Read** verification to ensure data integrity.
+### Simulation Waveform
+The waveform below (about 380-650 ns of the simulation, viewed in GTKWave) shows the decode-error behavior with `NUM_REGS_TEST = 8`, i.e. valid addresses `0x00`-`0x1C`:
 
-![Simulation Waveform](images/simulation_wave.png)
+![Simulation Waveform](images/sim_wave.png)
 
 **Analysis of Results:**
-The simulation validates the FSM correctness through two key transactions:
-
-1.  **Write Transaction (Left Side):**
-    * The Master asserts `PSEL` and drives `PWRITE` **HIGH**, indicating a write operation.
-    * The payload `0xDEADBEEF` is driven onto the `PWDATA` bus.
-    * When `PENABLE` and `PREADY` are high, the Slave captures the data.
-
-2.  **Read Transaction (Right Side):**
-    * The Master asserts `PSEL` again but drives `PWRITE` **LOW**, indicating a read operation.
-    * The Slave responds by driving the previously stored value, `0xDEADBEEF`, onto the `PRDATA` bus.
-    * The simulation proves that the data was correctly stored in the Slave and retrieved by the Master without data loss.
-
-### Error Response Waveform
-The waveform below (about 380-650 ns of the simulation) shows the decode-error behavior with `NUM_REGS_TEST = 8`, i.e. valid addresses `0x00`-`0x1C`:
-
-![APB Error Waveform](images/apb_error_wave.png)
 
 1.  **Out-of-range read (`0x20`, directed test):** `PSLVERR` is raised, `PRDATA` stays `0`, and `master_err` goes high at the end of the transfer.
-2.  **Out-of-range write and read (`0x24`, random stage):** the same behavior, with a different number of wait-states in each transfer.
+2.  **Out-of-range write and read (`0x24`, random stage):** the same behavior, with a different number of wait-states in each transfer. While `PREADY` is low, `PSEL`, `PENABLE`, `PADDR`, `PWRITE` and `PWDATA` stay stable.
 3.  **In-range write (`0x18`, data `0x5E7502BC`):** no error, `master_err` stays low.
 
 `PSLVERR` is asserted for the whole ACCESS phase of an out-of-range access. The Master samples it only at the handshake (`PSEL && PENABLE && PREADY`), as the protocol requires, and holds it in `master_err_out` until the next transfer starts.
