@@ -106,6 +106,17 @@ The simulation validates the FSM correctness through two key transactions:
     * The Slave responds by driving the previously stored value, `0xDEADBEEF`, onto the `PRDATA` bus.
     * The simulation proves that the data was correctly stored in the Slave and retrieved by the Master without data loss.
 
+### Error Response Waveform
+The waveform below (about 380-650 ns of the simulation) shows the decode-error behavior with `NUM_REGS_TEST = 8`, i.e. valid addresses `0x00`-`0x1C`:
+
+![APB Error Waveform](images/apb_error_wave.png)
+
+1.  **Out-of-range read (`0x20`, directed test):** `PSLVERR` is raised, `PRDATA` stays `0`, and `master_err` goes high at the end of the transfer.
+2.  **Out-of-range write and read (`0x24`, random stage):** the same behavior, with a different number of wait-states in each transfer.
+3.  **In-range write (`0x18`, data `0x5E7502BC`):** no error, `master_err` stays low.
+
+`PSLVERR` is asserted for the whole ACCESS phase of an out-of-range access. The Master samples it only at the handshake (`PSEL && PENABLE && PREADY`), as the protocol requires, and holds it in `master_err_out` until the next transfer starts.
+
 ## 6. File Description
 * `RTL/APB_master.sv`: The FSM-based Master controller RTL (module `apb_master`) with SVA properties.
 * `RTL/APB_slave.sv`: A reference Slave module (module `apb_slave_simple`) with randomized wait-states.
