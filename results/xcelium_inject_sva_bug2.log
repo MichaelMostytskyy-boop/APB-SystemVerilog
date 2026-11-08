@@ -1,0 +1,437 @@
+[2026-11-08 18:07:59 UTC] xrun -Q -unbuffered '+define+APB_ASSERT' '-coverage' 'functional' '+define+INJECT_SVA_BUG2' '-access' '+rw' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Nov 08, 2026 at 13:08:00 EST
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		tb_apb_system
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+Loading snapshot worklib.tb_apb_system:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+
+[INIT] Applying System Reset...
+[INIT] System Running with 8 Registers.
+
+--- Starting Directed Tests ---
+xmsim: *E,ASRTST (./design.sv,176): (time 245 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+
+--- Starting Error (PSLVERR) Tests ---
+xmsim: *E,ASRTST (./design.sv,176): (time 305 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 415 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 475 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+
+--- Starting Random Stress Test (200 Iterations) ---
+.xmsim: *E,ASRTST (./design.sv,176): (time 655 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 715 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 925 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 995 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 1065 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 1145 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 1215 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 1275 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 1375 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 1535 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 1645 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 1755 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 1865 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 1945 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 2025 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 2185 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 2295 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 2505 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 2675 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 2915 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+.xmsim: *E,ASRTST (./design.sv,176): (time 3075 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 3185 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 3425 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 3545 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 3655 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 3915 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 3975 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 4085 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 4195 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 4305 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 4425 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 4615 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 4775 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 4835 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 4905 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 5015 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+.xmsim: *E,ASRTST (./design.sv,176): (time 5325 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 5385 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 5455 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 5615 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 5705 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 5835 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 5925 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 6065 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 6175 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 6235 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 6315 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 6385 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 6455 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 6565 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 6625 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 6735 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 6795 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 6855 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 6965 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 7175 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 7235 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 7465 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 7525 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 7695 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+.xmsim: *E,ASRTST (./design.sv,176): (time 7815 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 8075 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 8135 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 8275 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 8355 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 8485 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 8615 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 8975 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 9045 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 9105 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 9215 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 9275 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 9385 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 9505 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 9575 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 9645 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 9765 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 10075 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+.xmsim: *E,ASRTST (./design.sv,176): (time 10205 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 10285 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 10495 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 10605 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 10775 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 10835 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 10945 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 11005 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 11415 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 11635 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 11695 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 11765 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 11825 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 11885 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 12005 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 12065 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 12125 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 12235 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 12315 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 12375 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+.xmsim: *E,ASRTST (./design.sv,176): (time 12695 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 12765 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 12875 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 12945 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 13005 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 13115 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 13445 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 13505 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 13775 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 13895 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 14005 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 14115 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 14285 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 14395 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 14565 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 14625 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 14735 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+.xmsim: *E,ASRTST (./design.sv,176): (time 14855 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 14915 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 14985 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 15075 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 15185 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 15295 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 15405 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 15465 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 15695 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 15865 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 15975 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 16085 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 16155 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 16235 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 16365 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 16475 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 16535 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 16665 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 16785 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 16845 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 16955 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 17065 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 17135 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+.xmsim: *E,ASRTST (./design.sv,176): (time 17455 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 17515 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 17575 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 17785 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 17895 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 17975 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 18185 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 18295 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 18375 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 18435 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 18605 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 18715 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 18785 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 18845 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 18915 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 18985 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 19105 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 19315 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 19425 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 19485 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 19565 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+.xmsim: *E,ASRTST (./design.sv,176): (time 19875 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 20045 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 20105 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 20375 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 20475 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 20585 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 20715 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 21025 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 21125 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 21215 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 21285 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 21385 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 21545 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 21755 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 21815 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+.xmsim: *E,ASRTST (./design.sv,176): (time 22295 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 22415 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 22475 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 22585 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 23045 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 23105 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 23165 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 23275 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 23335 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 23445 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 23525 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 23595 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 23675 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 23845 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 24035 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 24095 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 24185 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+xmsim: *E,ASRTST (./design.sv,176): (time 24295 NS) Assertion tb_apb_system.u_master.a_wait_state_stable has failed
+[SVA] Bus not stable / not held during wait-state
+
+
+==========================================
+   STATUS: PASSED 
+   Ran 396 tests with 0 errors.
+   Scoreboard checks: 407 | Functional coverage: 100.0%
+==========================================
+Simulation complete via $finish(1) at time 24305 NS + 0
+./testbench.sv:316         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+xmsim: *W,CGPIZE: Instance coverage for covergroup instance "cg" will not be dumped to database as per_instance option value is set to 0:./testbench.sv, 104.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb_apb_system(tb_apb_system)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_00000000_0b6e6c78.ucm
+  data               :  ./cov_work/scope/test/icc_00000000_0b6e6c78.ucd
+TOOL:	xrun	25.03-s001: Exiting on Nov 08, 2026 at 13:08:02 EST  (total: 00:00:02)
+Exit code expected: 0, received: 1
+Done

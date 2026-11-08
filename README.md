@@ -82,11 +82,11 @@ Coverage is measured on the bins above, with the default seed.
 
 | Switch | Bug | Caught by |
 | :--- | :--- | :--- |
-| `INJECT_BUG` (Slave) | Write data has bit 0 flipped | Scoreboard and data checks (Icarus: 382 errors) |
+| `INJECT_BUG` (Slave) | Write data has bit 0 flipped | Scoreboard and data checks (Icarus: 382 errors, Xcelium: 378 errors) |
 | `INJECT_SVA_BUG2` (Master) | `PWDATA` changes while waiting for `PREADY` | `a_wait_state_stable` only; the scoreboard does not see it because the correct data is present at the handshake |
 | `INJECT_SVA_BUG1` (Master) | `PENABLE` raised already in SETUP | `a_enable_after_setup` (first failure at 75 ns), `a_idle_after_done`, `a_err_latched` and `a_decode_err`; the testbench also reports data errors |
 
-The testbench `STATUS` line counts only its own checks; with SVA enabled, look for `[SVA]` messages in the log.
+The testbench `STATUS` line counts only its own checks; with SVA enabled, look for `[SVA]` messages in the log. The Xcelium logs of all four runs are in `results/`.
 
 ### Simulation Waveforms
 Both waveforms are taken from the same simulation and viewed in GTKWave.
@@ -113,7 +113,7 @@ The waveform below (about 380-650 ns of the simulation) shows the decode-error b
 * `RTL/APB_master.sv`: The FSM-based Master controller RTL (module `apb_master`) with SVA properties.
 * `RTL/APB_slave.sv`: A reference Slave module (module `apb_slave_simple`) with randomized wait-states.
 * `TB/TB_APB_system.sv`: Top-level testbench with Scoreboard and Coverage.
-* `results/`: Simulation log of the clean Icarus Verilog run.
+* `results/`: Simulation logs: `icarus_clean.log` (Icarus Verilog, clean run) and the four Cadence Xcelium runs `xcelium_clean.log`, `xcelium_inject_sva_bug1.log`, `xcelium_inject_sva_bug2.log` and `xcelium_inject_bug.log`.
 
 ## 7. Tools Used
 * **Language:** SystemVerilog (IEEE 1800-2012)

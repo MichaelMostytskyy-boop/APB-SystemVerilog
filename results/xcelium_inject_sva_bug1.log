@@ -1,0 +1,1575 @@
+[2026-11-08 18:07:05 UTC] xrun -Q -unbuffered '+define+APB_ASSERT' '-coverage' 'functional' '+define+INJECT_SVA_BUG1' '-access' '+rw' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Nov 08, 2026 at 13:07:05 EST
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		tb_apb_system
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+Loading snapshot worklib.tb_apb_system:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+
+[INIT] Applying System Reset...
+[INIT] System Running with 8 Registers.
+
+--- Starting Directed Tests ---
+xmsim: *E,ASRTST (./design.sv,170): (time 75 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 85 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 115 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 175 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 225 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+
+--- Starting Error (PSLVERR) Tests ---
+xmsim: *E,ASRTST (./design.sv,170): (time 285 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 295 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 325 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 375 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+
+--- Starting Random Stress Test (200 Iterations) ---
+xmsim: *E,ASRTST (./design.sv,170): (time 455 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 465 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 495 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 505 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x633e0238 | Got: 0x00000000
+.xmsim: *E,ASRTST (./design.sv,180): (time 505 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 535 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 585 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 595 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x9467db32 | Got: 0x633e0238
+xmsim: *E,ASRTST (./design.sv,180): (time 595 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 695 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 705 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x6d6b1f65 | Got: 0x9467db32
+xmsim: *E,ASRTST (./design.sv,180): (time 705 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 735 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 745 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 775 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 825 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 885 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 895 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x394f43e8 | Got: 0xca7fe9ba
+xmsim: *E,ASRTST (./design.sv,180): (time 895 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 925 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 935 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 965 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 1035 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 1045 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1075 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x2fc794f7 | Got: 0x5db7e51a
+xmsim: *E,ASRTST (./design.sv,170): (time 1105 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 1185 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1195 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x9d948fa6 | Got: 0x5db7e51a
+xmsim: *E,ASRTST (./design.sv,180): (time 1195 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 1255 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1265 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x9cff93de | Got: 0x9d948fa6
+xmsim: *E,ASRTST (./design.sv,180): (time 1265 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 1295 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 1305 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1385 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0xac808179 | Got: 0x5db7e51a
+xmsim: *E,ASRTST (./design.sv,170): (time 1415 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 1425 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 1455 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 1505 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 1555 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1565 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xe6084d5d | Got: 0xa3b932bf
+xmsim: *E,ASRTST (./design.sv,180): (time 1565 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 1625 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1635 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x199d2a18 | Got: 0xe6084d5d
+xmsim: *E,ASRTST (./design.sv,180): (time 1635 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 1665 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 1675 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1705 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x1e6325be | Got: 0x2fc794f7
+xmsim: *E,ASRTST (./design.sv,170): (time 1735 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 1795 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,214): (time 1805 NS).
+tb_apb_system.check_error_status
+[FAIL] Random OOB access. Expected Error Status: 1, Got: 0
+xmsim: *E,ASRTST (./testbench.sv,111): (time 1805 NS) Assertion tb_apb_system.a_decode_err has failed
+[SVA] Out-of-range access did not produce master error
+xmsim: *E,ASRTST (./design.sv,180): (time 1805 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,185): (time 1805 NS) Assertion tb_apb_system.u_master.a_err_latched has failed
+[SVA] master_err_out does not match PSLVERR at handshake
+xmsim: *E,ASRTST (./design.sv,170): (time 1905 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1955 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xe49166c3 | Got: 0x1e6325be
+xmsim: *E,ASRTST (./design.sv,170): (time 1985 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 1995 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2035 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x1ca5569f | Got: 0x1e6325be
+xmsim: *E,ASRTST (./design.sv,170): (time 2065 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 2115 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2125 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x4cc14b88 | Got: 0x1e6325be
+xmsim: *E,ASRTST (./design.sv,180): (time 2125 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 2155 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 2165 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2195 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0xc57b47bc | Got: 0x4cc14b88
+xmsim: *E,ASRTST (./design.sv,170): (time 2225 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 2235 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 2265 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2275 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x1db50f3b | Got: 0x4cc14b88
+xmsim: *E,ASRTST (./design.sv,180): (time 2275 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 2305 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 2385 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+.xmsim: *E,ASRTST (./design.sv,170): (time 2435 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 2485 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2495 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xad74050b | Got: 0x33eaa8ed
+xmsim: *E,ASRTST (./design.sv,180): (time 2495 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 2525 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 2535 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 2565 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 2625 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 2675 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2685 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0xf6cb48e4 | Got: 0x6ff8df9e
+xmsim: *E,ASRTST (./design.sv,180): (time 2685 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 2715 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 2765 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 2815 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 2825 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 2855 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2865 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x3c1bdd1e | Got: 0xf490f49f
+xmsim: *E,ASRTST (./design.sv,180): (time 2865 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 2955 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2965 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0xc0e1058e | Got: 0x3c1bdd1e
+xmsim: *E,ASRTST (./design.sv,180): (time 2965 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 2995 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 3045 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3055 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xc46b1961 | Got: 0x5db7e51a
+xmsim: *E,ASRTST (./design.sv,180): (time 3055 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 3085 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 3095 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 3125 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3135 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x4ff98b4d | Got: 0xc46b1961
+xmsim: *E,ASRTST (./design.sv,180): (time 3135 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 3165 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 3225 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 3275 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 3325 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3335 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x292477a9 | Got: 0x66e4f006
+xmsim: *E,ASRTST (./design.sv,180): (time 3335 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 3365 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./testbench.sv,111): (time 3375 NS) Assertion tb_apb_system.a_decode_err has failed
+[SVA] Out-of-range access did not produce master error
+xmsim: *E,ASRTST (./design.sv,180): (time 3375 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,185): (time 3375 NS) Assertion tb_apb_system.u_master.a_err_latched has failed
+[SVA] master_err_out does not match PSLVERR at handshake
+xmsim: *E,ASRTST (./design.sv,170): (time 3405 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 3465 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 3515 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3525 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x64788cbc | Got: 0x00000000
+xmsim: *E,ASRTST (./design.sv,180): (time 3525 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 3585 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3605 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0xc7b81575 | Got: 0x292477a9
+xmsim: *E,ASRTST (./design.sv,170): (time 3635 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 3695 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3705 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x7158d79e | Got: 0x292477a9
+xmsim: *E,ASRTST (./design.sv,180): (time 3705 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 3735 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 3785 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3795 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x0a34cc0c | Got: 0x7158d79e
+xmsim: *E,ASRTST (./design.sv,180): (time 3795 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 3825 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 3875 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 3925 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 3935 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 3965 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 4015 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 4065 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4075 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xf3c91a4a | Got: 0x0600ea4b
+xmsim: *E,ASRTST (./design.sv,180): (time 4075 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 4105 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 4115 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 4145 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4155 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0xcc91e104 | Got: 0xf3c91a4a
+xmsim: *E,ASRTST (./design.sv,180): (time 4155 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 4185 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 4235 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4245 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x24eae1a6 | Got: 0xcc91e104
+.xmsim: *E,ASRTST (./design.sv,180): (time 4245 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 4275 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 4285 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 4315 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4325 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x81459035 | Got: 0x24eae1a6
+xmsim: *E,ASRTST (./design.sv,180): (time 4325 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 4385 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4395 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xaf39e680 | Got: 0x81459035
+xmsim: *E,ASRTST (./design.sv,180): (time 4395 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 4425 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 4435 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 4465 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 4515 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 4565 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4575 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x4139a574 | Got: 0x370defeb
+xmsim: *E,ASRTST (./design.sv,180): (time 4575 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 4655 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4665 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x1312bf6c | Got: 0x4139a574
+xmsim: *E,ASRTST (./design.sv,180): (time 4665 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 4695 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 4705 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 4735 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 4815 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 4875 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 4945 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./testbench.sv,111): (time 4955 NS) Assertion tb_apb_system.a_decode_err has failed
+[SVA] Out-of-range access did not produce master error
+xmsim: *E,ASRTST (./design.sv,180): (time 4955 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,185): (time 4955 NS) Assertion tb_apb_system.u_master.a_err_latched has failed
+[SVA] master_err_out does not match PSLVERR at handshake
+xmsim: *E,ASRTST (./design.sv,170): (time 4985 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 5055 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 5065 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 5095 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5105 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0xc4877b4a | Got: 0x00000000
+xmsim: *E,ASRTST (./design.sv,180): (time 5105 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 5135 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 5145 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 5175 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5185 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xb541c0d5 | Got: 0xc4877b4a
+xmsim: *E,ASRTST (./design.sv,180): (time 5185 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 5245 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5265 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x99632785 | Got: 0x8dd0e2b3
+xmsim: *E,ASRTST (./design.sv,170): (time 5295 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 5305 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5335 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x0954f294 | Got: 0x8dd0e2b3
+xmsim: *E,ASRTST (./design.sv,170): (time 5365 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 5375 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 5405 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5415 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xf95a390e | Got: 0x8dd0e2b3
+xmsim: *E,ASRTST (./design.sv,180): (time 5415 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 5445 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 5495 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 5545 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 5595 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5605 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xdfea18fa | Got: 0x24ce9a07
+xmsim: *E,ASRTST (./design.sv,180): (time 5605 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 5635 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 5685 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 5745 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 5795 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5805 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x92333b44 | Got: 0x00000000
+xmsim: *E,ASRTST (./design.sv,180): (time 5805 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 5875 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5935 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x0522fadb | Got: 0x370defeb
+xmsim: *E,ASRTST (./design.sv,170): (time 5965 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 5975 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 6005 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6015 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x4fc3671d | Got: 0x370defeb
+xmsim: *E,ASRTST (./design.sv,180): (time 6015 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 6105 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6125 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x691d5fde | Got: 0x24ce9a07
+.xmsim: *E,ASRTST (./design.sv,170): (time 6155 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 6215 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,214): (time 6225 NS).
+tb_apb_system.check_error_status
+[FAIL] Random OOB access. Expected Error Status: 1, Got: 0
+xmsim: *E,ASRTST (./testbench.sv,111): (time 6225 NS) Assertion tb_apb_system.a_decode_err has failed
+[SVA] Out-of-range access did not produce master error
+xmsim: *E,ASRTST (./design.sv,180): (time 6225 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,185): (time 6225 NS) Assertion tb_apb_system.u_master.a_err_latched has failed
+[SVA] master_err_out does not match PSLVERR at handshake
+xmsim: *E,ASRTST (./design.sv,170): (time 6255 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 6315 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6325 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x4c05b7df | Got: 0x00000000
+xmsim: *E,ASRTST (./design.sv,180): (time 6325 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 6385 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6395 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x5f2ef6f5 | Got: 0x4c05b7df
+xmsim: *E,ASRTST (./design.sv,180): (time 6395 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 6425 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 6435 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6465 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0xa6c814df | Got: 0x4c05b7df
+xmsim: *E,ASRTST (./design.sv,170): (time 6495 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 6545 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6555 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xc9a6bdac | Got: 0x4c05b7df
+xmsim: *E,ASRTST (./design.sv,180): (time 6555 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 6585 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 6645 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 6705 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./testbench.sv,111): (time 6715 NS) Assertion tb_apb_system.a_decode_err has failed
+[SVA] Out-of-range access did not produce master error
+xmsim: *E,ASRTST (./design.sv,180): (time 6715 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,185): (time 6715 NS) Assertion tb_apb_system.u_master.a_err_latched has failed
+[SVA] master_err_out does not match PSLVERR at handshake
+xmsim: *E,ASRTST (./design.sv,170): (time 6775 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 6835 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6845 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x7dad7b74 | Got: 0x99933e27
+xmsim: *E,ASRTST (./design.sv,180): (time 6845 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 6875 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 6885 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 6915 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6925 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x089cb6f4 | Got: 0x7dad7b74
+xmsim: *E,ASRTST (./design.sv,180): (time 6925 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 6955 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 7005 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 7055 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 7105 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 7155 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 7165 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 7195 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 7205 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x97438a39 | Got: 0xf30e3567
+xmsim: *E,ASRTST (./design.sv,180): (time 7205 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 7235 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 7245 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 7275 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 7285 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x17e010d6 | Got: 0x97438a39
+xmsim: *E,ASRTST (./design.sv,180): (time 7285 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 7315 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 7365 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 7415 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 7425 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 7455 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 7505 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 7515 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 7545 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 7555 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x6a14fa96 | Got: 0x257280ce
+xmsim: *E,ASRTST (./design.sv,180): (time 7555 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 7585 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 7635 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 7685 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 7735 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 7745 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x3fe5e5d2 | Got: 0x0b27f34a
+xmsim: *E,ASRTST (./design.sv,180): (time 7745 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 7775 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 7785 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 7825 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x094446c9 | Got: 0x3fe5e5d2
+xmsim: *E,ASRTST (./design.sv,170): (time 7855 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 7865 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 7895 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+.xmsim: *E,ASRTST (./design.sv,170): (time 7955 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 7965 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 7995 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 8055 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 8115 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 8175 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 8185 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 8285 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x2a55dd27 | Got: 0xf4b398e6
+xmsim: *E,ASRTST (./design.sv,170): (time 8315 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 8395 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 8405 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0xa124ebff | Got: 0xf4b398e6
+xmsim: *E,ASRTST (./design.sv,180): (time 8405 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 8435 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 8445 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 8475 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 8525 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 8535 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 8565 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 8655 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 8705 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 8715 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x3f98c1e7 | Got: 0xd1d1ee94
+xmsim: *E,ASRTST (./design.sv,180): (time 8715 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 8745 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 8755 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 8785 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 8835 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 8845 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 8875 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 8885 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x87d36a1d | Got: 0xe8e31411
+xmsim: *E,ASRTST (./design.sv,180): (time 8885 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 8915 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 8925 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 8955 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 8965 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0xf6966c0b | Got: 0x87d36a1d
+xmsim: *E,ASRTST (./design.sv,180): (time 8965 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 8995 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 9045 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9055 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x411011b6 | Got: 0xf6966c0b
+xmsim: *E,ASRTST (./design.sv,180): (time 9055 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 9085 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 9095 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 9125 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 9195 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 9205 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 9235 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 9315 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 9365 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9375 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x3317945f | Got: 0xd56dbc75
+xmsim: *E,ASRTST (./design.sv,180): (time 9375 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 9405 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 9475 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 9545 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 9615 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9625 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xed996cc8 | Got: 0x8095f1df
+xmsim: *E,ASRTST (./design.sv,180): (time 9625 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 9685 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9705 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0xd6536757 | Got: 0xd56dbc75
+xmsim: *E,ASRTST (./design.sv,170): (time 9735 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 9745 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9775 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0xce668d1e | Got: 0xd56dbc75
+xmsim: *E,ASRTST (./design.sv,170): (time 9805 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 9815 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 9845 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9855 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x985eccd1 | Got: 0xd56dbc75
+xmsim: *E,ASRTST (./design.sv,180): (time 9855 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 9885 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 9935 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9945 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0xf83ec862 | Got: 0x985eccd1
+.xmsim: *E,ASRTST (./design.sv,180): (time 9945 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 9975 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 10025 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 10075 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 10085 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10125 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x07970ec5 | Got: 0x7439b352
+xmsim: *E,ASRTST (./design.sv,170): (time 10155 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 10165 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10215 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x5174b06d | Got: 0x7439b352
+xmsim: *E,ASRTST (./design.sv,170): (time 10245 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 10255 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10295 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x2d0b8a46 | Got: 0x7439b352
+xmsim: *E,ASRTST (./design.sv,170): (time 10325 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 10335 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 10365 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10375 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x97de58a6 | Got: 0x7439b352
+xmsim: *E,ASRTST (./design.sv,180): (time 10375 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 10405 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 10415 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 10445 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 10495 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 10505 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10535 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x1f86bc69 | Got: 0x7c69737e
+xmsim: *E,ASRTST (./design.sv,170): (time 10565 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 10575 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 10605 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10615 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x88900731 | Got: 0x7c69737e
+xmsim: *E,ASRTST (./design.sv,180): (time 10615 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 10675 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10685 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x73d1a088 | Got: 0x88900731
+xmsim: *E,ASRTST (./design.sv,180): (time 10685 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 10715 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 10815 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 10875 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 10925 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10935 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x4094be73 | Got: 0x26c4d2ee
+xmsim: *E,ASRTST (./design.sv,180): (time 10935 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 10965 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 11015 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 11065 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 11075 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 11105 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11115 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x07afe42d | Got: 0xae00e934
+xmsim: *E,ASRTST (./design.sv,180): (time 11115 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 11195 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11215 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x4125eda9 | Got: 0x1f86bc69
+xmsim: *E,ASRTST (./design.sv,170): (time 11245 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 11255 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 11285 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 11345 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 11355 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 11385 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 11455 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 11465 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 11495 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11505 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x8dbbd5af | Got: 0x08be8f49
+xmsim: *E,ASRTST (./design.sv,180): (time 11505 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 11535 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 11675 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11685 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x250da062 | Got: 0x8dbbd5af
+xmsim: *E,ASRTST (./design.sv,180): (time 11685 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 11715 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 11765 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11775 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x6fdec118 | Got: 0x250da062
+xmsim: *E,ASRTST (./design.sv,180): (time 11775 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 11805 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 11865 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11875 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x42d58bee | Got: 0x6fdec118
+.xmsim: *E,ASRTST (./design.sv,180): (time 11875 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 11905 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 11965 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11975 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x28956f56 | Got: 0x42d58bee
+xmsim: *E,ASRTST (./design.sv,180): (time 11975 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 12045 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12075 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xc929624e | Got: 0x07afe42d
+xmsim: *E,ASRTST (./design.sv,170): (time 12105 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 12165 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 12215 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 12275 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12285 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x45c2a9db | Got: 0x7bfe8ae2
+xmsim: *E,ASRTST (./design.sv,180): (time 12285 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 12355 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12365 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x60be0859 | Got: 0x45c2a9db
+xmsim: *E,ASRTST (./design.sv,180): (time 12365 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 12395 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 12405 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 12435 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 12485 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 12495 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12525 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x6cb176be | Got: 0x21293ef7
+xmsim: *E,ASRTST (./design.sv,170): (time 12555 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 12565 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 12595 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 12655 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 12665 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 12695 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12705 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xc62616bc | Got: 0x3b6f5417
+xmsim: *E,ASRTST (./design.sv,180): (time 12705 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 12805 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12815 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xa4cbbd3f | Got: 0xc62616bc
+xmsim: *E,ASRTST (./design.sv,180): (time 12815 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 12845 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 12895 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12905 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x2a26ad37 | Got: 0x28956f56
+xmsim: *E,ASRTST (./design.sv,180): (time 12905 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 12935 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 12985 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 13045 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 13095 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 13155 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 13205 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 13215 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0xdcf1a989 | Got: 0xc3745243
+xmsim: *E,ASRTST (./design.sv,180): (time 13215 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 13245 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 13295 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,214): (time 13305 NS).
+tb_apb_system.check_error_status
+[FAIL] Random OOB access. Expected Error Status: 1, Got: 0
+xmsim: *E,ASRTST (./testbench.sv,111): (time 13305 NS) Assertion tb_apb_system.a_decode_err has failed
+[SVA] Out-of-range access did not produce master error
+xmsim: *E,ASRTST (./design.sv,180): (time 13305 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,185): (time 13305 NS) Assertion tb_apb_system.u_master.a_err_latched has failed
+[SVA] master_err_out does not match PSLVERR at handshake
+xmsim: *E,ASRTST (./design.sv,170): (time 13335 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 13345 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 13375 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 13385 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0xf8f6f187 | Got: 0x00000000
+xmsim: *E,ASRTST (./design.sv,180): (time 13385 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 13445 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 13455 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0xe3611b31 | Got: 0xf8f6f187
+xmsim: *E,ASRTST (./design.sv,180): (time 13455 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 13485 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 13495 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 13525 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 13535 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xc9e73eed | Got: 0xdcf1a989
+xmsim: *E,ASRTST (./design.sv,180): (time 13535 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 13565 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 13625 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 13635 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x9295a729 | Got: 0xc9e73eed
+xmsim: *E,ASRTST (./design.sv,180): (time 13635 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 13665 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 13715 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+.xmsim: *E,ASRTST (./design.sv,170): (time 13785 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 13835 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 13895 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 13905 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 13935 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 13945 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xf9ec2b0f | Got: 0xf443b28d
+xmsim: *E,ASRTST (./design.sv,180): (time 13945 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 14045 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14065 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x0e3478d3 | Got: 0xc9e73eed
+xmsim: *E,ASRTST (./design.sv,170): (time 14095 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 14105 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 14135 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14145 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0xb9d1b2a6 | Got: 0xc9e73eed
+xmsim: *E,ASRTST (./design.sv,180): (time 14145 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 14175 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 14185 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 14215 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14225 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x1eba64f7 | Got: 0xb9d1b2a6
+xmsim: *E,ASRTST (./design.sv,180): (time 14225 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 14285 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14295 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x2fd52b0b | Got: 0x1eba64f7
+xmsim: *E,ASRTST (./design.sv,180): (time 14295 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 14355 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14405 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xc5939253 | Got: 0xc62616bc
+xmsim: *E,ASRTST (./design.sv,170): (time 14435 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 14485 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 14535 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 14545 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14575 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x5de3b92e | Got: 0xf1dc2633
+xmsim: *E,ASRTST (./design.sv,170): (time 14605 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./testbench.sv,111): (time 14615 NS) Assertion tb_apb_system.a_decode_err has failed
+[SVA] Out-of-range access did not produce master error
+xmsim: *E,ASRTST (./design.sv,180): (time 14615 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,185): (time 14615 NS) Assertion tb_apb_system.u_master.a_err_latched has failed
+[SVA] master_err_out does not match PSLVERR at handshake
+xmsim: *E,ASRTST (./design.sv,170): (time 14645 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 14705 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 14755 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14765 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x4919f1ca | Got: 0x00000000
+xmsim: *E,ASRTST (./design.sv,180): (time 14765 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 14795 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 14805 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 14835 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 14895 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 14905 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 14935 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14945 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xab8a4948 | Got: 0xa2d2e354
+xmsim: *E,ASRTST (./design.sv,180): (time 14945 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 14975 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 15025 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 15115 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 15165 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15175 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x7dc2ec91 | Got: 0x36359329
+xmsim: *E,ASRTST (./design.sv,180): (time 15175 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 15205 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 15255 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 15305 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 15315 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15345 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0xad7a93fe | Got: 0xa15e148a
+xmsim: *E,ASRTST (./design.sv,170): (time 15375 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 15425 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 15505 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 15515 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 15545 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 15595 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 15645 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15655 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x3dfe4e68 | Got: 0x1e0ede9f
+.xmsim: *E,ASRTST (./design.sv,180): (time 15655 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 15735 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15755 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x5b6d6fe7 | Got: 0x7dc2ec91
+xmsim: *E,ASRTST (./design.sv,170): (time 15785 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./testbench.sv,111): (time 15795 NS) Assertion tb_apb_system.a_decode_err has failed
+[SVA] Out-of-range access did not produce master error
+xmsim: *E,ASRTST (./design.sv,180): (time 15795 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,185): (time 15795 NS) Assertion tb_apb_system.u_master.a_err_latched has failed
+[SVA] master_err_out does not match PSLVERR at handshake
+xmsim: *E,ASRTST (./design.sv,170): (time 15825 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,214): (time 15835 NS).
+tb_apb_system.check_error_status
+[FAIL] Random OOB access. Expected Error Status: 1, Got: 0
+xmsim: *E,ASRTST (./testbench.sv,111): (time 15835 NS) Assertion tb_apb_system.a_decode_err has failed
+[SVA] Out-of-range access did not produce master error
+xmsim: *E,ASRTST (./design.sv,180): (time 15835 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,185): (time 15835 NS) Assertion tb_apb_system.u_master.a_err_latched has failed
+[SVA] master_err_out does not match PSLVERR at handshake
+xmsim: *E,ASRTST (./design.sv,170): (time 15865 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 15875 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15905 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xa27e9663 | Got: 0x00000000
+xmsim: *E,ASRTST (./design.sv,170): (time 15935 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 15945 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 15975 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15985 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0xf99baf1c | Got: 0x00000000
+xmsim: *E,ASRTST (./design.sv,180): (time 15985 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 16015 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 16065 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 16125 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 16195 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 16275 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 16325 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 16335 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0xa3d20874 | Got: 0x79ea6830
+xmsim: *E,ASRTST (./design.sv,180): (time 16335 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 16405 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 16425 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0xd30d69bc | Got: 0xad7a93fe
+xmsim: *E,ASRTST (./design.sv,170): (time 16455 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 16515 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 16575 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 16625 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 16635 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x6c3ca7b8 | Got: 0xf65eebc5
+xmsim: *E,ASRTST (./design.sv,180): (time 16635 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 16705 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 16715 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x33988836 | Got: 0x6c3ca7b8
+xmsim: *E,ASRTST (./design.sv,180): (time 16715 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 16745 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 16825 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 16885 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 16935 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 16995 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 17045 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 17105 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 17175 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 17185 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x860f9582 | Got: 0xa088bac1
+xmsim: *E,ASRTST (./design.sv,180): (time 17185 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 17215 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 17225 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 17255 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 17265 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xa1d47795 | Got: 0x860f9582
+xmsim: *E,ASRTST (./design.sv,180): (time 17265 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 17295 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 17365 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 17415 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 17425 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 17465 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x1cccd7f8 | Got: 0x22ce4fee
+xmsim: *E,ASRTST (./design.sv,170): (time 17495 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 17555 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 17565 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0xf0e8e6b1 | Got: 0x22ce4fee
+xmsim: *E,ASRTST (./design.sv,180): (time 17565 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 17595 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 17645 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+.xmsim: *E,ASRTST (./design.sv,170): (time 17695 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 17765 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 17825 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 17875 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,214): (time 17885 NS).
+tb_apb_system.check_error_status
+[FAIL] Random OOB access. Expected Error Status: 1, Got: 0
+xmsim: *E,ASRTST (./testbench.sv,111): (time 17885 NS) Assertion tb_apb_system.a_decode_err has failed
+[SVA] Out-of-range access did not produce master error
+xmsim: *E,ASRTST (./design.sv,180): (time 17885 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,185): (time 17885 NS) Assertion tb_apb_system.u_master.a_err_latched has failed
+[SVA] master_err_out does not match PSLVERR at handshake
+xmsim: *E,ASRTST (./design.sv,170): (time 17915 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 17975 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 17985 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x9c241d61 | Got: 0x00000000
+xmsim: *E,ASRTST (./design.sv,180): (time 17985 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 18015 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 18065 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 18115 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 18125 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 18155 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 18205 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 18215 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 18305 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x68705b72 | Got: 0x8fa67ff3
+xmsim: *E,ASRTST (./design.sv,170): (time 18335 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 18415 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 18425 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0xbf6296b0 | Got: 0x8fa67ff3
+xmsim: *E,ASRTST (./design.sv,180): (time 18425 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 18455 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 18465 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 18495 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 18505 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x3e0017ef | Got: 0xbf6296b0
+xmsim: *E,ASRTST (./design.sv,180): (time 18505 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 18535 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 18545 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 18575 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 18585 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x347b39eb | Got: 0x3e0017ef
+xmsim: *E,ASRTST (./design.sv,180): (time 18585 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 18645 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,214): (time 18655 NS).
+tb_apb_system.check_error_status
+[FAIL] Random OOB access. Expected Error Status: 1, Got: 0
+xmsim: *E,ASRTST (./testbench.sv,111): (time 18655 NS) Assertion tb_apb_system.a_decode_err has failed
+[SVA] Out-of-range access did not produce master error
+xmsim: *E,ASRTST (./design.sv,180): (time 18655 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,185): (time 18655 NS) Assertion tb_apb_system.u_master.a_err_latched has failed
+[SVA] master_err_out does not match PSLVERR at handshake
+xmsim: *E,ASRTST (./design.sv,170): (time 18685 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./testbench.sv,111): (time 18695 NS) Assertion tb_apb_system.a_decode_err has failed
+[SVA] Out-of-range access did not produce master error
+xmsim: *E,ASRTST (./design.sv,180): (time 18695 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,185): (time 18695 NS) Assertion tb_apb_system.u_master.a_err_latched has failed
+[SVA] master_err_out does not match PSLVERR at handshake
+xmsim: *E,ASRTST (./design.sv,170): (time 18755 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 18765 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 18795 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x13aba1eb | Got: 0x00000000
+xmsim: *E,ASRTST (./design.sv,170): (time 18825 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 18885 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 18895 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x221e0ff8 | Got: 0x00000000
+xmsim: *E,ASRTST (./design.sv,180): (time 18895 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 18955 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 18995 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0xb2cd681e | Got: 0xf0e8e6b1
+xmsim: *E,ASRTST (./design.sv,170): (time 19025 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 19075 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 19085 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x396ba2b1 | Got: 0xf0e8e6b1
+xmsim: *E,ASRTST (./design.sv,180): (time 19085 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 19145 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 19155 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x738f8f86 | Got: 0x396ba2b1
+xmsim: *E,ASRTST (./design.sv,180): (time 19155 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 19185 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 19245 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 19295 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,180): (time 19305 NS) Assertion tb_apb_system.u_master.a_idle_after_done has failed
+[SVA] PSEL still high after transfer completed
+xmsim: *E,ASRTST (./design.sv,170): (time 19335 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 19385 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ASRTST (./design.sv,170): (time 19465 NS) Assertion tb_apb_system.u_master.a_enable_after_setup has failed
+[SVA] PENABLE rose without a preceding SETUP
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 19475 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x3b521330 | Got: 0x84a10e17
+
+
+==========================================
+   STATUS: FAILED 
+   Detected 134 errors.
+   Scoreboard checks: 540 | Functional coverage: 100.0%
+==========================================
+Simulation complete via $finish(1) at time 19475 NS + 0
+./testbench.sv:316         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+xmsim: *W,CGPIZE: Instance coverage for covergroup instance "cg" will not be dumped to database as per_instance option value is set to 0:./testbench.sv, 104.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb_apb_system(tb_apb_system)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_00000000_0b6e6c78.ucm
+  data               :  ./cov_work/scope/test/icc_00000000_0b6e6c78.ucd
+TOOL:	xrun	25.03-s001: Exiting on Nov 08, 2026 at 13:07:07 EST  (total: 00:00:02)
+Exit code expected: 0, received: 1
+Done

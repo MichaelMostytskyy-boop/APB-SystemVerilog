@@ -1,0 +1,1179 @@
+[2026-11-08 18:08:58 UTC] xrun -Q -unbuffered '+define+APB_ASSERT' '-coverage' 'functional' '+define+INJECT_BUG' '-access' '+rw' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Nov 08, 2026 at 13:08:58 EST
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		tb_apb_system
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+Loading snapshot worklib.tb_apb_system:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+
+[INIT] Applying System Reset...
+[INIT] System Running with 8 Registers.
+
+--- Starting Directed Tests ---
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 135 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0xdeadbeef got 0xdeadbeee
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 145 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xdeadbeef | Got: 0xdeadbeee
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 245 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0xcafebabe got 0xcafebabf
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 255 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xcafebabe | Got: 0xcafebabf
+
+--- Starting Error (PSLVERR) Tests ---
+
+--- Starting Random Stress Test (200 Iterations) ---
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 575 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0x633e0238 got 0x633e0239
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 585 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x633e0238 | Got: 0x633e0239
+.xmsim: *E,ERRSEV (./testbench.sv,144): (time 715 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x9467db32 got 0x9467db33
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 725 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x9467db32 | Got: 0x9467db33
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 815 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x6d6b1f65 got 0x6d6b1f64
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 825 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x6d6b1f65 | Got: 0x6d6b1f64
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 925 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0xca7fe9ba got 0xca7fe9bb
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 935 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0xca7fe9ba | Got: 0xca7fe9bb
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 1065 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0x394f43e8 got 0x394f43e9
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1075 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x394f43e8 | Got: 0x394f43e9
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 1215 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0x5db7e51a got 0x5db7e51b
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1225 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x5db7e51a | Got: 0x5db7e51b
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 1375 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0x2fc794f7 got 0x2fc794f6
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1385 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x2fc794f7 | Got: 0x2fc794f6
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 1475 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0x9d948fa6 got 0x9d948fa7
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1485 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x9d948fa6 | Got: 0x9d948fa7
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 1585 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0x9cff93de got 0x9cff93df
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1595 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x9cff93de | Got: 0x9cff93df
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 1695 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0xac808179 got 0xac808178
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1705 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0xac808179 | Got: 0xac808178
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 1865 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0xa3b932bf got 0xa3b932be
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 1875 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xa3b932bf | Got: 0xa3b932be
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 2025 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0xe6084d5d got 0xe6084d5c
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2035 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xe6084d5d | Got: 0xe6084d5c
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 2125 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0x199d2a18 got 0x199d2a19
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2135 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x199d2a18 | Got: 0x199d2a19
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 2235 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x1e6325be got 0x1e6325bf
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2245 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x1e6325be | Got: 0x1e6325bf
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 2445 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0xe49166c3 got 0xe49166c2
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2455 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xe49166c3 | Got: 0xe49166c2
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 2555 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x1ca5569f got 0x1ca5569e
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2565 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x1ca5569f | Got: 0x1ca5569e
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 2675 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0x4cc14b88 got 0x4cc14b89
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2685 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x4cc14b88 | Got: 0x4cc14b89
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 2775 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0xc57b47bc got 0xc57b47bd
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2785 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0xc57b47bc | Got: 0xc57b47bd
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 2915 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x1db50f3b got 0x1db50f3a
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 2925 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x1db50f3b | Got: 0x1db50f3a
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 3015 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0x33eaa8ed got 0x33eaa8ec
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3025 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x33eaa8ed | Got: 0x33eaa8ec
+.xmsim: *E,ERRSEV (./testbench.sv,144): (time 3125 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0xad74050b got 0xad74050a
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3135 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xad74050b | Got: 0xad74050a
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 3235 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x6ff8df9e got 0x6ff8df9f
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3245 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x6ff8df9e | Got: 0x6ff8df9f
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 3335 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0xf6cb48e4 got 0xf6cb48e5
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3345 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0xf6cb48e4 | Got: 0xf6cb48e5
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 3475 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0xf490f49f got 0xf490f49e
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3485 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0xf490f49f | Got: 0xf490f49e
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 3595 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0x3c1bdd1e got 0x3c1bdd1f
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3605 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x3c1bdd1e | Got: 0x3c1bdd1f
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 3705 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0xc0e1058e got 0xc0e1058f
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3715 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0xc0e1058e | Got: 0xc0e1058f
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 3805 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0xc46b1961 got 0xc46b1960
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3815 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xc46b1961 | Got: 0xc46b1960
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 3915 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x4ff98b4d got 0x4ff98b4c
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 3925 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x4ff98b4d | Got: 0x4ff98b4c
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 4025 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x66e4f006 got 0x66e4f007
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4035 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x66e4f006 | Got: 0x66e4f007
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 4135 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0x292477a9 got 0x292477a8
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4145 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x292477a9 | Got: 0x292477a8
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 4355 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0x64788cbc got 0x64788cbd
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4365 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x64788cbc | Got: 0x64788cbd
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 4475 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0xc7b81575 got 0xc7b81574
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4485 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0xc7b81575 | Got: 0xc7b81574
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 4615 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x7158d79e got 0x7158d79f
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4625 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x7158d79e | Got: 0x7158d79f
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 4715 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x0a34cc0c got 0x0a34cc0d
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4725 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x0a34cc0c | Got: 0x0a34cc0d
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 4835 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0xca75d9ab got 0xca75d9aa
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4845 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xca75d9ab | Got: 0xca75d9aa
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 4955 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x0600ea4b got 0x0600ea4a
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 4965 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x0600ea4b | Got: 0x0600ea4a
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 5065 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0xf3c91a4a got 0xf3c91a4b
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5075 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xf3c91a4a | Got: 0xf3c91a4b
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 5165 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0xcc91e104 got 0xcc91e105
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5175 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0xcc91e104 | Got: 0xcc91e105
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 5265 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x24eae1a6 got 0x24eae1a7
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5275 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x24eae1a6 | Got: 0x24eae1a7
+.xmsim: *E,ERRSEV (./testbench.sv,144): (time 5385 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x81459035 got 0x81459034
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5395 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x81459035 | Got: 0x81459034
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 5505 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0xaf39e680 got 0xaf39e681
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5515 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xaf39e680 | Got: 0xaf39e681
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 5615 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x370defeb got 0x370defea
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5625 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x370defeb | Got: 0x370defea
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 5755 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x4139a574 got 0x4139a575
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5765 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x4139a574 | Got: 0x4139a575
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 5925 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0x1312bf6c got 0x1312bf6d
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 5935 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x1312bf6c | Got: 0x1312bf6d
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 6065 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0x530900db got 0x530900da
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6075 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x530900db | Got: 0x530900da
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 6175 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0x8dd0e2b3 got 0x8dd0e2b2
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6185 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x8dd0e2b3 | Got: 0x8dd0e2b2
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 6455 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0xc4877b4a got 0xc4877b4b
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6465 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0xc4877b4a | Got: 0xc4877b4b
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 6565 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0xb541c0d5 got 0xb541c0d4
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6575 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xb541c0d5 | Got: 0xb541c0d4
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 6675 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0x99632785 got 0x99632784
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6685 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x99632785 | Got: 0x99632784
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 6795 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x0954f294 got 0x0954f295
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6805 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x0954f294 | Got: 0x0954f295
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 6905 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0xf95a390e got 0xf95a390f
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 6915 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xf95a390e | Got: 0xf95a390f
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 7015 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x24ce9a07 got 0x24ce9a06
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 7025 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x24ce9a07 | Got: 0x24ce9a06
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 7115 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0xdfea18fa got 0xdfea18fb
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 7125 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xdfea18fa | Got: 0xdfea18fb
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 7335 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0x92333b44 got 0x92333b45
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 7345 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x92333b44 | Got: 0x92333b45
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 7465 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x0522fadb got 0x0522fada
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 7475 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x0522fadb | Got: 0x0522fada
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 7575 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0x4fc3671d got 0x4fc3671c
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 7585 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x4fc3671d | Got: 0x4fc3671c
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 7695 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x691d5fde got 0x691d5fdf
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 7705 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x691d5fde | Got: 0x691d5fdf
+.xmsim: *E,ERRSEV (./testbench.sv,144): (time 7915 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x4c05b7df got 0x4c05b7de
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 7925 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x4c05b7df | Got: 0x4c05b7de
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 8015 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x5f2ef6f5 got 0x5f2ef6f4
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 8025 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x5f2ef6f5 | Got: 0x5f2ef6f4
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 8135 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0xa6c814df got 0xa6c814de
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 8145 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0xa6c814df | Got: 0xa6c814de
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 8355 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0xc9a6bdac got 0xc9a6bdad
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 8365 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xc9a6bdac | Got: 0xc9a6bdad
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 8485 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0x99933e27 got 0x99933e26
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 8495 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x99933e27 | Got: 0x99933e26
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 8715 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0x7dad7b74 got 0x7dad7b75
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 8725 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x7dad7b74 | Got: 0x7dad7b75
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 8815 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0x089cb6f4 got 0x089cb6f5
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 8825 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x089cb6f4 | Got: 0x089cb6f5
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 8915 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x4c7ebf1c got 0x4c7ebf1d
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 8925 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x4c7ebf1c | Got: 0x4c7ebf1d
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 9045 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0xf30e3567 got 0xf30e3566
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9055 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xf30e3567 | Got: 0xf30e3566
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 9155 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x97438a39 got 0x97438a38
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9165 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x97438a39 | Got: 0x97438a38
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 9275 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x17e010d6 got 0x17e010d7
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9285 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x17e010d6 | Got: 0x17e010d7
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 9385 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0xf4091918 got 0xf4091919
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9395 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xf4091918 | Got: 0xf4091919
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 9505 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x257280ce got 0x257280cf
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9515 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x257280ce | Got: 0x257280cf
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 9645 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x6a14fa96 got 0x6a14fa97
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9655 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x6a14fa96 | Got: 0x6a14fa97
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 9765 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0x0b27f34a got 0x0b27f34b
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9775 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x0b27f34a | Got: 0x0b27f34b
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 9865 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x3fe5e5d2 got 0x3fe5e5d3
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9875 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x3fe5e5d2 | Got: 0x3fe5e5d3
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 9965 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0x094446c9 got 0x094446c8
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 9975 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x094446c9 | Got: 0x094446c8
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 10075 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0xbdd485c8 got 0xbdd485c9
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10085 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0xbdd485c8 | Got: 0xbdd485c9
+.xmsim: *E,ERRSEV (./testbench.sv,144): (time 10205 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0x31dae6fd got 0x31dae6fc
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10215 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x31dae6fd | Got: 0x31dae6fc
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 10335 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0xf4b398e6 got 0xf4b398e7
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10345 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0xf4b398e6 | Got: 0xf4b398e7
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 10435 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0x2a55dd27 got 0x2a55dd26
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10445 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x2a55dd27 | Got: 0x2a55dd26
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 10545 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0xa124ebff got 0xa124ebfe
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10555 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0xa124ebff | Got: 0xa124ebfe
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 10655 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x499f30e9 got 0x499f30e8
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10665 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x499f30e9 | Got: 0x499f30e8
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 10775 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0xd1d1ee94 got 0xd1d1ee95
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10785 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0xd1d1ee94 | Got: 0xd1d1ee95
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 10885 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x3f98c1e7 got 0x3f98c1e6
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 10895 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x3f98c1e7 | Got: 0x3f98c1e6
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 11005 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0xe8e31411 got 0xe8e31410
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11015 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0xe8e31411 | Got: 0xe8e31410
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 11105 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0x87d36a1d got 0x87d36a1c
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11115 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x87d36a1d | Got: 0x87d36a1c
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 11205 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0xf6966c0b got 0xf6966c0a
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11215 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0xf6966c0b | Got: 0xf6966c0a
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 11305 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0x411011b6 got 0x411011b7
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11315 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x411011b6 | Got: 0x411011b7
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 11415 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0xfc2a928f got 0xfc2a928e
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11425 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xfc2a928f | Got: 0xfc2a928e
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 11635 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0xd56dbc75 got 0xd56dbc74
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11645 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0xd56dbc75 | Got: 0xd56dbc74
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 11765 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x3317945f got 0x3317945e
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11775 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x3317945f | Got: 0x3317945e
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 11885 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0x8095f1df got 0x8095f1de
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 11895 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x8095f1df | Got: 0x8095f1de
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 12005 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0xed996cc8 got 0xed996cc9
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12015 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xed996cc8 | Got: 0xed996cc9
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 12125 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0xd6536757 got 0xd6536756
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12135 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0xd6536757 | Got: 0xd6536756
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 12235 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0xce668d1e got 0xce668d1f
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12245 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0xce668d1e | Got: 0xce668d1f
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 12375 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0x985eccd1 got 0x985eccd0
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12385 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x985eccd1 | Got: 0x985eccd0
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 12475 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0xf83ec862 got 0xf83ec863
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12485 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0xf83ec862 | Got: 0xf83ec863
+.xmsim: *E,ERRSEV (./testbench.sv,144): (time 12575 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x7439b352 got 0x7439b353
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12585 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x7439b352 | Got: 0x7439b353
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 12695 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0x07970ec5 got 0x07970ec4
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12705 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x07970ec5 | Got: 0x07970ec4
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 12815 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0x5174b06d got 0x5174b06c
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12825 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x5174b06d | Got: 0x5174b06c
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 12945 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x2d0b8a46 got 0x2d0b8a47
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 12955 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x2d0b8a46 | Got: 0x2d0b8a47
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 13055 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x97de58a6 got 0x97de58a7
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 13065 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x97de58a6 | Got: 0x97de58a7
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 13165 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x7c69737e got 0x7c69737f
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 13175 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x7c69737e | Got: 0x7c69737f
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 13265 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x1f86bc69 got 0x1f86bc68
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 13275 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x1f86bc69 | Got: 0x1f86bc68
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 13365 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x88900731 got 0x88900730
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 13375 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x88900731 | Got: 0x88900730
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 13505 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x73d1a088 got 0x73d1a089
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 13515 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x73d1a088 | Got: 0x73d1a089
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 13605 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0x26c4d2ee got 0x26c4d2ef
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 13615 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x26c4d2ee | Got: 0x26c4d2ef
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 13705 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0x4094be73 got 0x4094be72
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 13715 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x4094be73 | Got: 0x4094be72
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 13825 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0xae00e934 got 0xae00e935
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 13835 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0xae00e934 | Got: 0xae00e935
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 14005 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0x07afe42d got 0x07afe42c
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14015 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x07afe42d | Got: 0x07afe42c
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 14115 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x4125eda9 got 0x4125eda8
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14125 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x4125eda9 | Got: 0x4125eda8
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 14215 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0xe3138d6c got 0xe3138d6d
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14225 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xe3138d6c | Got: 0xe3138d6d
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 14335 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x08be8f49 got 0x08be8f48
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14345 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x08be8f49 | Got: 0x08be8f48
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 14445 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0x8dbbd5af got 0x8dbbd5ae
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14455 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x8dbbd5af | Got: 0x8dbbd5ae
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 14565 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x250da062 got 0x250da063
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14575 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x250da062 | Got: 0x250da063
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 14675 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x6fdec118 got 0x6fdec119
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14685 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x6fdec118 | Got: 0x6fdec119
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 14785 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x42d58bee got 0x42d58bef
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14795 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x42d58bee | Got: 0x42d58bef
+.xmsim: *E,ERRSEV (./testbench.sv,144): (time 14915 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x28956f56 got 0x28956f57
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 14925 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x28956f56 | Got: 0x28956f57
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 15075 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0xc929624e got 0xc929624f
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15085 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xc929624e | Got: 0xc929624f
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 15185 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0x7bfe8ae2 got 0x7bfe8ae3
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15195 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x7bfe8ae2 | Got: 0x7bfe8ae3
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 15295 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0x45c2a9db got 0x45c2a9da
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15305 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x45c2a9db | Got: 0x45c2a9da
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 15405 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x60be0859 got 0x60be0858
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15415 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x60be0859 | Got: 0x60be0858
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 15515 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x21293ef7 got 0x21293ef6
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15525 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x21293ef7 | Got: 0x21293ef6
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 15615 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x6cb176be got 0x6cb176bf
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15625 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x6cb176be | Got: 0x6cb176bf
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 15745 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x3b6f5417 got 0x3b6f5416
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15755 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x3b6f5417 | Got: 0x3b6f5416
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 15865 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0xc62616bc got 0xc62616bd
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15875 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xc62616bc | Got: 0xc62616bd
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 15975 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0xa4cbbd3f got 0xa4cbbd3e
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 15985 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xa4cbbd3f | Got: 0xa4cbbd3e
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 16085 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x2a26ad37 got 0x2a26ad36
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 16095 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x2a26ad37 | Got: 0x2a26ad36
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 16235 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0xd12aa949 got 0xd12aa948
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 16245 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0xd12aa949 | Got: 0xd12aa948
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 16365 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0xc3745243 got 0xc3745242
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 16375 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0xc3745243 | Got: 0xc3745242
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 16475 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0xdcf1a989 got 0xdcf1a988
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 16485 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0xdcf1a989 | Got: 0xdcf1a988
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 16715 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0xf8f6f187 got 0xf8f6f186
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 16725 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0xf8f6f187 | Got: 0xf8f6f186
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 16845 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0xe3611b31 got 0xe3611b30
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 16855 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0xe3611b31 | Got: 0xe3611b30
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 16955 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0xc9e73eed got 0xc9e73eec
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 16965 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xc9e73eed | Got: 0xc9e73eec
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 17065 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0x9295a729 got 0x9295a728
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 17075 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x9295a729 | Got: 0x9295a728
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 17185 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x92936864 got 0x92936865
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 17195 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x92936864 | Got: 0x92936865
+.xmsim: *E,ERRSEV (./testbench.sv,144): (time 17285 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0xf443b28d got 0xf443b28c
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 17295 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0xf443b28d | Got: 0xf443b28c
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 17385 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0xf9ec2b0f got 0xf9ec2b0e
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 17395 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xf9ec2b0f | Got: 0xf9ec2b0e
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 17515 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x0e3478d3 got 0x0e3478d2
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 17525 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x0e3478d3 | Got: 0x0e3478d2
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 17625 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0xb9d1b2a6 got 0xb9d1b2a7
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 17635 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0xb9d1b2a6 | Got: 0xb9d1b2a7
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 17725 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0x1eba64f7 got 0x1eba64f6
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 17735 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x1eba64f7 | Got: 0x1eba64f6
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 17835 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x2fd52b0b got 0x2fd52b0a
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 17845 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x2fd52b0b | Got: 0x2fd52b0a
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 17975 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0xc5939253 got 0xc5939252
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 17985 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xc5939253 | Got: 0xc5939252
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 18075 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0xf1dc2633 got 0xf1dc2632
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 18085 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0xf1dc2633 | Got: 0xf1dc2632
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 18185 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0x5de3b92e got 0x5de3b92f
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 18195 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0x5de3b92e | Got: 0x5de3b92f
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 18485 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x4919f1ca got 0x4919f1cb
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 18495 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x4919f1ca | Got: 0x4919f1cb
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 18605 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0xa2d2e354 got 0xa2d2e355
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 18615 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xa2d2e354 | Got: 0xa2d2e355
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 18715 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0xab8a4948 got 0xab8a4949
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 18725 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xab8a4948 | Got: 0xab8a4949
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 18845 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x36359329 got 0x36359328
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 18855 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x36359329 | Got: 0x36359328
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 18985 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x7dc2ec91 got 0x7dc2ec90
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 18995 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x7dc2ec91 | Got: 0x7dc2ec90
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 19105 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0xa15e148a got 0xa15e148b
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 19115 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0xa15e148a | Got: 0xa15e148b
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 19205 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0xad7a93fe got 0xad7a93ff
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 19215 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0xad7a93fe | Got: 0xad7a93ff
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 19315 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x8d610fd0 got 0x8d610fd1
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 19325 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x8d610fd0 | Got: 0x8d610fd1
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 19485 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x1e0ede9f got 0x1e0ede9e
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 19495 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x1e0ede9f | Got: 0x1e0ede9e
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 19615 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0x3dfe4e68 got 0x3dfe4e69
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 19625 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x3dfe4e68 | Got: 0x3dfe4e69
+.xmsim: *E,ERRSEV (./testbench.sv,144): (time 19715 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x5b6d6fe7 got 0x5b6d6fe6
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 19725 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x5b6d6fe7 | Got: 0x5b6d6fe6
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 19975 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0xa27e9663 got 0xa27e9662
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 19985 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xa27e9663 | Got: 0xa27e9662
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 20105 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0xf99baf1c got 0xf99baf1d
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 20115 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0xf99baf1c | Got: 0xf99baf1d
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 20305 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0x79ea6830 got 0x79ea6831
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 20315 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0x79ea6830 | Got: 0x79ea6831
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 20475 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0xa3d20874 got 0xa3d20875
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 20485 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0xa3d20874 | Got: 0xa3d20875
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 20585 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0xd30d69bc got 0xd30d69bd
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 20595 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0xd30d69bc | Got: 0xd30d69bd
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 20715 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0xf65eebc5 got 0xf65eebc4
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 20725 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xf65eebc5 | Got: 0xf65eebc4
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 20815 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x6c3ca7b8 got 0x6c3ca7b9
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 20825 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x6c3ca7b8 | Got: 0x6c3ca7b9
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 20915 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x33988836 got 0x33988837
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 20925 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x33988836 | Got: 0x33988837
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 21125 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0xc1a56e3e got 0xc1a56e3f
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 21135 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xc1a56e3e | Got: 0xc1a56e3f
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 21285 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0xea65365a got 0xea65365b
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 21295 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xea65365a | Got: 0xea65365b
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 21435 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0xa088bac1 got 0xa088bac0
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 21445 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0xa088bac1 | Got: 0xa088bac0
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 21545 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x860f9582 got 0x860f9583
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 21555 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x860f9582 | Got: 0x860f9583
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 21645 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0xa1d47795 got 0xa1d47794
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 21655 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xa1d47795 | Got: 0xa1d47794
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 21755 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x22ce4fee got 0x22ce4fef
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 21765 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x22ce4fee | Got: 0x22ce4fef
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 21865 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x1cccd7f8 got 0x1cccd7f9
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 21875 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x1cccd7f8 | Got: 0x1cccd7f9
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 21965 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0xf0e8e6b1 got 0xf0e8e6b0
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 21975 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0xf0e8e6b1 | Got: 0xf0e8e6b0
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 22065 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000001c exp 0x4b9e0de7 got 0x4b9e0de6
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 22075 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000001c | Exp: 0x4b9e0de7 | Got: 0x4b9e0de6
+.xmsim: *E,ERRSEV (./testbench.sv,144): (time 22165 NS).
+tb_apb_system
+[SB] Read mismatch @0x0000000c exp 0xa95e6e1f got 0xa95e6e1e
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 22175 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x0000000c | Exp: 0xa95e6e1f | Got: 0xa95e6e1e
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 22415 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0x9c241d61 got 0x9c241d60
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 22425 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x9c241d61 | Got: 0x9c241d60
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 22525 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0x70189a9b got 0x70189a9a
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 22535 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x70189a9b | Got: 0x70189a9a
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 22635 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x8fa67ff3 got 0x8fa67ff2
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 22645 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x8fa67ff3 | Got: 0x8fa67ff2
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 22735 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x68705b72 got 0x68705b73
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 22745 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x68705b72 | Got: 0x68705b73
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 22835 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0xbf6296b0 got 0xbf6296b1
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 22845 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0xbf6296b0 | Got: 0xbf6296b1
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 22935 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0x3e0017ef got 0x3e0017ee
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 22945 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x3e0017ef | Got: 0x3e0017ee
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 23045 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0x347b39eb got 0x347b39ea
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 23055 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x347b39eb | Got: 0x347b39ea
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 23385 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000004 exp 0x13aba1eb got 0x13aba1ea
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 23395 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000004 | Exp: 0x13aba1eb | Got: 0x13aba1ea
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 23525 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x221e0ff8 got 0x221e0ff9
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 23535 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x221e0ff8 | Got: 0x221e0ff9
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 23675 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000014 exp 0xb2cd681e got 0xb2cd681f
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 23685 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000014 | Exp: 0xb2cd681e | Got: 0xb2cd681f
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 23775 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0x396ba2b1 got 0x396ba2b0
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 23785 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0x396ba2b1 | Got: 0x396ba2b0
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 23895 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000008 exp 0x738f8f86 got 0x738f8f87
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 23905 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000008 | Exp: 0x738f8f86 | Got: 0x738f8f87
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 24035 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000000 exp 0xd2d5f3d1 got 0xd2d5f3d0
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 24045 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000000 | Exp: 0xd2d5f3d1 | Got: 0xd2d5f3d0
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 24185 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000010 exp 0x84a10e17 got 0x84a10e16
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 24195 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000010 | Exp: 0x84a10e17 | Got: 0x84a10e16
+xmsim: *E,ERRSEV (./testbench.sv,144): (time 24295 NS).
+tb_apb_system
+[SB] Read mismatch @0x00000018 exp 0x3b521330 got 0x3b521331
+xmsim: *E,ERRSEV (./testbench.sv,204): (time 24305 NS).
+tb_apb_system.check_result
+[FAIL] Data Mismatch at 0x00000018 | Exp: 0x3b521330 | Got: 0x3b521331
+
+
+==========================================
+   STATUS: FAILED 
+   Detected 378 errors.
+   Scoreboard checks: 407 | Functional coverage: 100.0%
+==========================================
+Simulation complete via $finish(1) at time 24305 NS + 0
+./testbench.sv:316         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+xmsim: *W,CGPIZE: Instance coverage for covergroup instance "cg" will not be dumped to database as per_instance option value is set to 0:./testbench.sv, 104.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb_apb_system(tb_apb_system)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_00000000_0b6e6c78.ucm
+  data               :  ./cov_work/scope/test/icc_00000000_0b6e6c78.ucd
+TOOL:	xrun	25.03-s001: Exiting on Nov 08, 2026 at 13:09:00 EST  (total: 00:00:02)
+Exit code expected: 0, received: 1
+Done

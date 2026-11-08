@@ -1,0 +1,44 @@
+[2026-11-08 18:06:10 UTC] xrun -Q -unbuffered '+define+APB_ASSERT' '-coverage' 'functional' '-access' '+rw' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Nov 08, 2026 at 13:06:10 EST
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		tb_apb_system
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+Loading snapshot worklib.tb_apb_system:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+
+[INIT] Applying System Reset...
+[INIT] System Running with 8 Registers.
+
+--- Starting Directed Tests ---
+
+--- Starting Error (PSLVERR) Tests ---
+
+--- Starting Random Stress Test (200 Iterations) ---
+..........
+
+==========================================
+   STATUS: PASSED 
+   Ran 396 tests with 0 errors.
+   Scoreboard checks: 407 | Functional coverage: 100.0%
+==========================================
+Simulation complete via $finish(1) at time 24305 NS + 0
+./testbench.sv:316         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+xmsim: *W,CGPIZE: Instance coverage for covergroup instance "cg" will not be dumped to database as per_instance option value is set to 0:./testbench.sv, 104.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb_apb_system(tb_apb_system)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_00000000_0b6e6c78.ucm
+  data               :  ./cov_work/scope/test/icc_00000000_0b6e6c78.ucd
+TOOL:	xrun	25.03-s001: Exiting on Nov 08, 2026 at 13:06:12 EST  (total: 00:00:02)
+Done
