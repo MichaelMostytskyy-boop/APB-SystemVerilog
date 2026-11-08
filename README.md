@@ -113,7 +113,7 @@ The waveform below (about 380-650 ns of the simulation) shows the decode-error b
 * `RTL/APB_master.sv`: The FSM-based Master controller RTL (module `apb_master`) with SVA properties.
 * `RTL/APB_slave.sv`: A reference Slave module (module `apb_slave_simple`) with randomized wait-states.
 * `TB/TB_APB_system.sv`: Top-level testbench with Scoreboard and Coverage.
-* `results/`: Simulation logs of the runs listed in Section 5.
+* `results/`: Simulation log of the clean Icarus Verilog run.
 
 ## 7. Tools Used
 * **Language:** SystemVerilog (IEEE 1800-2012)
